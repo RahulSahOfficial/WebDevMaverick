@@ -1,0 +1,11 @@
+.all-hotels{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.each-hotel{
+    background: #e0e0e0;
+    padding: 1rem;
+    width: 16rem;
+}

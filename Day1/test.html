@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/predict-rank.css" />
+    <script src="data/college.js"></script>
+    <title>NIMCET College Predictor 2023 | Predict College from Rank</title>
+    <meta
+      name="title"
+      content="NIMCET College Predictor 2023 | Predict College from Rank"
+    />
+    <meta
+      name="description"
+      content="NIMCET College Predictor 2023 from rank. Predict your NIT college from your rank in NIMCET 2023 exam based on previous year data."
+    />
+    <meta
+      name="keywords"
+      content="nimcet,nimcet rank predictor,nimcet college,nit trichy,mca,nimcet 2023"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta
+      property="og:title"
+      content="NIMCET College Predictor 2023 | Predict College from Rank"
+    />
+    <meta
+      property="og:description"
+      content="NIMCET College Predictor 2023 from rank. Predict your NIT college from your rank in NIMCET 2023 exam based on previous year data."
+    />
+    <meta
+      property="og:url"
+      content="https://nimcet-college-predictor.netlify.app/"
+    />
+    <meta
+      property="og:image"
+      content="https://em-content.zobj.net/thumbs/120/whatsapp/352/graduation-cap_1f393.png"
+    />
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFQE7SX4XF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TFQE7SX4XF');
+</script>
+
+  </head>
+  <body>
+    <header>
+      <h1>🎓 College Prediction based on NIMCET 2023 Rank.</h1>
+      <p>Know which NIT you are getting in NIMCET 2023</p>
+    </header>
+    <div class="form-box">
+      <div class="each-side">
+        <form action="/" method="post" id="predict-form">
+          <div class="each-input">
+            <label>Enter your Name</label>
+            <input
+              type="text"
+              name="NAME"
+              placeholder="Rahul Sah"
+              id="input-name"
+              required
+            />
+            <span class="error" id="name-error"></span>
+          </div>
+          <div class="each-input">
+            <label>Enter your Rank</label>
+            <input
+              type="number"
+              name="RANK"
+              id="input-rank"
+              placeholder="222"
+              required
+            />
+            <span class="error" id="rank-error"></span>
+          </div>
+          <div class="each-input">
+            <label>Select your Category</label>
+            <select name="CATEGORY" id="category">
+              <option value="OPEN" selected>OPEN</option>
+              <option value="GEN EWS">GEN EWS</option>
+              <option value="OBC-NCL">OBC-NCL</option>
+              <option value="SC">SC</option>
+              <option value="ST">ST</option>
+              <option value="OPEN (PwD)">OPEN (PwD)</option>
+              <option value="OBC-NCL (PwD)">OBC-NCL (PwD)</option>
+            </select>
+          </div>
+          <div class="each-input">
+            <label>Select your Choice Filling</label>
+            <p class="instruction">
+              You can do Up, Down, Add, Delete by given right buttons.
+            </p>
+            <div class="preference-list" id="preference-list-box"></div>
+          </div>
+          <input
+            type="hidden"
+            name="PREFERENCE"
+            id="input-preference"
+            value="NITT / NITS / MNIT / NITW / MANIT / NITK / NITJ / NITR / NITA / NITSF"
+          />
+          <input type="hidden" name="COLLEGE" id="input-college" value="NONE" />
+          <input
+            type="hidden"
+            name="DATETIME"
+            id="input-datetime"
+            value="01/01/2001 00:00 AM"
+          />
+          <button class="main-btn" id="college-submit">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i> PREDICT
+          </button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="left">
+        <p>
+          Designed & Developed by
+          <a href="https://www.linkedin.com/in/developersah/">Rahul Sah</a>.
+        </p>
+        <p>© Copyright 2023</p>
+      </div>
+      <div class="right">
+        <a href="https://github.com/RahulSahOfficial" target="_blank">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/developersah/" target="_blank">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/developer_sah/" target="_blank">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com/developer_sah" target="_blank">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://codepen.io/rahulsahofficial" target="_blank">
+          <i class="fa fa-codepen" aria-hidden="true"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="js/includes/date-format.js"></script>
+    <script src="js/function.js"></script>
+    <script src="js/preference_manager.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>

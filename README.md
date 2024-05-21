@@ -16,7 +16,7 @@
 1. A Tag
 1. P Tag
 1. `hr` `br` Closing Tags
-1. Formatting `b` `em` `sub` `sup`
+1. Formatting `b` `strong` `i`  `em` `sub` `sup`
 1. List
 1. Img Tag
 1. Video Tag
